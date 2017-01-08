@@ -10,6 +10,7 @@ end
 
 # Require all scripts
 require_relative 'lib/git'
+require_relative 'lib/rerun'
 
 # Run the command
 send(ARGV.shift, ARGV)
