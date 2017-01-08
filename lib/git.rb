@@ -2,7 +2,7 @@
 
 # Git
 def g(*args)
-  cmd('git', args)
+  cmd(%{git add --all && git commit -m "#{args.shift}" && git push}, args)
 end
 
 # Git add
