@@ -6,7 +6,7 @@ At the moment it contains short cut for git, docker and some utilities. The loca
 
 # Installation
 ```
-# Clone the repo
+# Clone the repo. Fork it first if you plan to keep customizing it
 git clone https://github.com/fugroup/scripts.git
 
 # Add this line to your .zshrc or .bashrc, and start a new shell
