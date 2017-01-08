@@ -1,5 +1,6 @@
 unalias g
-C="~/src/scripts/run.rb"
+C="`pwd`/run.rb"
+
 
 # Git
 alias g="$C g"
