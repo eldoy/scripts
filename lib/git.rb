@@ -1,8 +1,14 @@
 # Do unalias g if it's not working.
 
 # Git
-def g(*args)
-  cmd(%{git add --all && git commit -m "#{args.shift}" && git push}, args)
+def g(args)
+  # If message is blank, ask for it
+  if (message = args.shift || '').strip == ''
+    print "Message: "
+    message = STDIN.gets.chomp
+  end
+
+  cmd(%{git add --all && git commit -m "#{message}" && git push}, args)
 end
 
 # Git add
