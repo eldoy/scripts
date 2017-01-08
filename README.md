@@ -19,10 +19,11 @@ source ~/your/path/to/clone/aliases.sh
 # Git command is 'g'
 g 'Readme' # => git add --all && git commit -m "Readme" && git push
 g          # => Will ask for message if you forget it
+```
 
-# Other aliases, see the source
-https://github.com/fugroup/scripts/blob/master/aliases.sh
-https://github.com/fugroup/scripts/blob/master/lib/git.rb
+For other aliases, see the source
+* [Aliases](https://github.com/fugroup/scripts/blob/master/aliases.sh)
+* [Scripts](https://github.com/fugroup/scripts/tree/master/lib)
 ```
 
 Created and maintained by [Fugroup Ltd.](https://www.fugroup.net) We are the creators of [CrowdfundHQ.](https://crowdfundhq.com)
