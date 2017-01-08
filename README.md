@@ -4,6 +4,8 @@ These are some of the aliases and short cuts we use on a daily basis for softwar
 
 At the moment it contains short cut for git, docker and some utilities. The locations included are local to our machines, so you'll need to customize them to fit your system.
 
+There is a ruby runner included, check out the git commands in the `/lib` directory for an example.
+
 # Installation
 ```
 # Clone the repo. Fork it first if you plan to keep customizing it

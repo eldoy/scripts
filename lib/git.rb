@@ -70,4 +70,3 @@ end
 def gb
   cmd('git checkout HEAD~', args)
 end
-
