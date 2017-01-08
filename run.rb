@@ -1,17 +1,14 @@
 #!/usr/bin/env ruby
 
-# Add each command to the bin directory
-# Then define a method to run in lib
-# #!/bin/sh
-# exec ../run.rb command "$@"
-
-# Require all scripts
+# Add each command as an alias in aliases.sh
+# Define a ruby file with methods that matches the aliases to run in lib
 
 # Short creating a command
 def cmd(cmd, *args)
   system("#{cmd} #{args.join(' ')}")
 end
 
+# Require all scripts
 require_relative 'lib/git'
 
 # Run the command
