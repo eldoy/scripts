@@ -9,7 +9,7 @@ At the moment it contains short cut for git, docker and some utilities. The loca
 # Clone the repo
 git clone https://github.com/fugroup/scripts.git
 
-# Add this line to your .zshrc or .bashrc
+# Add this line to your .zshrc or .bashrc, and start a new shell
 source ~/your/path/to/clone/aliases.sh
 ```
 
