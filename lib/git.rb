@@ -41,13 +41,18 @@ def gp(*args)
   cmd('git push', args)
 end
 
-# Git pull
-def gpp(*args)
+# Git push force
+def gpf(*args)
+  cmd('git push --force', args)
+end
+
+# Git pull (update)
+def gu(*args)
   cmd('git pull', args)
 end
 
-# Git pull
-def gpr(*args)
+# Git pull (update) rebase
+def gur(*args)
   cmd('git pull --rebase', args)
 end
 
