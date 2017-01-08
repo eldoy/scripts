@@ -6,13 +6,23 @@ At the moment it contains short cut for git, docker and some utilities. The loca
 
 There is a ruby runner included, check out the git commands in the `/lib` directory for an example.
 
-# Installation
+### Installation
 ```
 # Clone the repo. Fork it first if you plan to keep customizing it
 git clone https://github.com/fugroup/scripts.git
 
 # Add this line to your .zshrc or .bashrc, and start a new shell
 source ~/your/path/to/clone/aliases.sh
+```
+### Usage
+```
+# Git command is 'g'
+g 'Readme' # => git add --all && git commit -m "Readme" && git push
+g          # => Will ask for message if you forget it
+
+# Other aliases, see the source
+https://github.com/fugroup/scripts/blob/master/aliases.sh
+https://github.com/fugroup/scripts/blob/master/lib/git.rb
 ```
 
 Created and maintained by [Fugroup Ltd.](https://www.fugroup.net) We are the creators of [CrowdfundHQ.](https://crowdfundhq.com)
