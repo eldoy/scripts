@@ -21,7 +21,7 @@ g 'Readme' # => git add --all && git commit -m "Readme" && git push
 g          # => Will ask for message if you forget it
 
 # To use the ruby runner
-alias command="$C ruby_app_name arg1 arg2"
+alias command="$C ruby_method_name arg1 arg2"
 ```
 
 For other aliases, see the source
