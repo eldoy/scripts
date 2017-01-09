@@ -2,7 +2,7 @@
 
 These are some of the aliases and short cuts we use on a daily basis for software development.
 
-At the moment it contains short cut for git, docker and some utilities. The locations included are local to our machines, so you'll need to customize them to fit your system.
+At the moment it contains short cuts for git, docker and some utilities. The locations included are local to our machines, so you'll need to customize them to fit your system.
 
 There is a ruby runner included, check out the git commands in the `/lib` directory for an example.
 
@@ -19,6 +19,9 @@ source ~/your/path/to/clone/aliases.sh
 # Git command is 'g'
 g 'Readme' # => git add --all && git commit -m "Readme" && git push
 g          # => Will ask for message if you forget it
+
+# To use the ruby runner
+alias command="$C ruby_app_name arg1 arg2"
 ```
 
 For other aliases, see the source

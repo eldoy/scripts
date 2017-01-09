@@ -14,6 +14,7 @@ alias console="irb -r ./config/boot.rb"
 alias dstore="find . -name '.DS_Store' -type f -delete"
 alias loc="find lib -name '*.*' | xargs wc -l"
 alias stuff="cat $SRC/stuff/text/stuff.txt"
+alias reload="source $HOME/.zshrc"
 
 
 # Git
@@ -99,7 +100,7 @@ AD="$DD,app/controllers,app/routes"
 
 # Servers
 alias asset_server="asset && $C server 4000 $DD $DP"
-alias pushfile_server="pushfile && $C server 4000 $DD $DP"
+alias pushfile_server="pushfile && $C server 4001 $DD $DP"
 alias admin_server="admin && $C server 3001 $AD $DP"
 alias site_server="site && $C server 3000 $AD $DP"
 alias site_test_server="site && $C server 3000 $AD $DP test"
