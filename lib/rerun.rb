@@ -7,6 +7,6 @@ end
 
 def testrun(args)
   dir, pattern, e = args
-  system(%{bundle exec rerun --dir #{dir} --pattern '#{pattern}' -- RACK_ENV=#{e} ruby test/run.rb})
+  system(%{bundle exec rerun --dir #{dir} --pattern '#{pattern}' -- RACK_ENV=#{e || 'development'} ruby test/run.rb})
 end
 

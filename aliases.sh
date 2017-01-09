@@ -69,6 +69,7 @@ alias admin="cd $SRC/fund/admin"
 alias flat="cd $SRC/flatspace"
 alias fugroup="cd $SRC/fugroup"
 alias music="cd $SRC/music"
+alias pushfile="cd $SRC/pushfile"
 alias api="cd $SRC/fund/api"
 alias team="cd $SRC/fund/team"
 alias routefu="cd $SRC/routefu"
@@ -87,33 +88,48 @@ alias hq="cd $SRC/hq"
 alias deploy="cd $SRC/deploy"
 
 
+# Default dir
+DD='.,lib,config'
+
+# Default pattern
+DP="'**/*.{rb,ru,yml}'"
+
+# App dir
+AD="$DD,app/controllers,app/routes"
+
 # Servers
-alias asset_server="asset && $C server 4000 .,lib,config '**/*.{rb,ru,yml}'"
-alias admin_server="admin && $C server 3001 .,app/controllers,app/routes,lib,config '**/*.{rb,ru,yml}'"
-alias site_server="site && $C server 3000 .,app/controllers,app/routes,lib,config '**/*.{rb,ru,yml}'"
-alias site_test_server="site && $C server 3000 .,app/controllers,app/routes,lib,config '**/*.{rb,ru,yml}' test"
-alias site3_server="site3 && $C server 3000 .,app/controllers,app/routes,lib,config '**/*.{rb,ru,yml}'"
-alias gosee_server="gosee && $C server 1234 .,lib,config '**/*.{rb,ru,yml}' '**/*.{rb,ru,yml}'"
-alias nw_server="nw && $C server 4567 .,config '**/*.{rb,ru,yml}''**/*.{rb,ru,yml}'"
-alias wave_server="wave && $C server 2345 .,config '**/*.{rb,ru,yml}'"
-alias routefu_server="routefu && $C server 1234 .,lib,config '**/*.{rb,ru,yml}'"
+alias asset_server="asset && $C server 4000 $DD $DP"
+alias pushfile_server="pushfile && $C server 4000 $DD $DP"
+alias admin_server="admin && $C server 3001 $AD $DP"
+alias site_server="site && $C server 3000 $AD $DP"
+alias site_test_server="site && $C server 3000 $AD $DP test"
+alias site3_server="site3 && $C server 3000 $AD $DP"
+alias gosee_server="gosee && $C server 1234 $DD $DP"
+alias nw_server="nw && $C server 4567 $DD $DP"
+alias wave_server="wave && $C server 2345 $DD $DP"
+alias routefu_server="routefu && $C server 1234 $DD $DP"
 
 
 # Tests
-alias asset_test="asset && $C testrun .,config '**/*.{rb,ru,yml}'"
-alias admin_test="admin && $C testrun app/controllers,app/routes,lib,test,config '**/*.{rb,ru,yml}'"
-alias modelize_test="modelize $C testrun .,lib,test,config '**/*.{rb,ru,yml}'"
-alias site_test="site && $C testrun app/controllers,app/routes,lib,test,config '**/*.{rb,ru,yml}'"
-alias mm_test="mm && $C testrun .,config '**/*.{rb,ru,yml}'"
-alias wave_test="wave && $C testrun .,config '**/*.{rb,ru,yml}'"
-alias core_test="core && $C testrun .,lib,config '**/*.{rb,ru,yml}'"
-alias futest_test="futest && $C testrun .,lib,config '**/*.{rb,ru,yml}'"
-alias convert_test="convert && $C testrun .,lib,config '**/*.{rb,ru,yml}'"
+alias asset_test="asset && $C testrun .,config $DP"
+alias admin_test="admin && $C testrun $AD $DP"
+alias modelize_test="modelize $C testrun $DD $DP"
+alias site_test="site && $C testrun $AD $DP"
+alias mm_test="mm && $C testrun $DD $DP"
+alias wave_test="wave && $C testrun $DD $DP"
+alias core_test="core && $C testrun $DD $DP"
+alias futest_test="futest && $C testrun $DD $DP"
+alias convert_test="convert && $C testrun $DD $DP"
+alias pushfile_test="pushfile && $C testrun $DD $DP"
+
+
+# Restart
+RS='git pull && touch tmp/restart.txt'
 
 # Deploy
-alias deploy_gosee="ssh play 'cd test && git pull && touch tmp/restart.txt'"
-alias deploy_wave="ssh play 'cd waveorb && git pull && touch tmp/restart.txt'"
-alias deploy_nw="ssh play 'cd network && git pull && touch tmp/restart.txt'"
+alias deploy_gosee="ssh play 'cd test && $RS'"
+alias deploy_wave="ssh play 'cd waveorb && $RS'"
+alias deploy_nw="ssh play 'cd network && $RS'"
 alias deploy_development="deploy && cap development deploy && fund"
 alias deploy_staging="deploy && cap staging deploy && fund"
 alias deploy_production="deploy && cap production deploy && fund"

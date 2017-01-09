@@ -13,4 +13,8 @@ require_relative 'lib/git'
 require_relative 'lib/rerun'
 
 # Run the command
-send(ARGV.shift, ARGV)
+begin
+  command = ARGV.shift; send(command, ARGV)
+rescue
+  puts "Unable to process command: #{command}"
+end
