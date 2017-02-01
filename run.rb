@@ -17,4 +17,6 @@ begin
   command = ARGV.shift; send(command, ARGV)
 rescue
   puts "Unable to process command: #{command}"
+ensure
+  exit 130
 end

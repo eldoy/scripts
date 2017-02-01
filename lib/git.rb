@@ -23,7 +23,7 @@ end
 
 # Git commit
 def gc(*args)
-  cmd('git commit -m', args)
+  cmd(%{git commit -m "#{args.join(' ')}"}, [])
 end
 
 # Git log
@@ -70,3 +70,10 @@ end
 def gb
   cmd('git checkout HEAD~', args)
 end
+
+# Git tag
+def gt
+  cmd('git tag', args)
+end
+
+

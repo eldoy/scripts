@@ -11,8 +11,9 @@ end
 
 def testrun(args)
   dir, pattern, e = args
+  puts "ENVIRONMENT: #{e}"
   begin
-    system(%{bundle exec rerun --dir #{dir} --pattern '#{pattern}' -- RACK_ENV=#{e || 'development'} ruby test/run.rb})
+    system(%{bundle exec rerun --dir #{dir},test --pattern '#{pattern}' -- RACK_ENV=#{e || 'development'} ruby test/run.rb})
   rescue
     puts "Shutting down..."; exit(0)
   end

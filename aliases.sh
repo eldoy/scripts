@@ -15,6 +15,7 @@ alias dstore="find . -name '.DS_Store' -type f -delete"
 alias loc="find lib -name '*.*' | xargs wc -l"
 alias stuff="cat $SRC/stuff/text/stuff.txt"
 alias reload="source $HOME/.zshrc"
+alias port_app="lsof -i"
 
 
 # Git
@@ -28,9 +29,12 @@ alias gd="$C gd"
 alias gp="$C gp"
 alias gpp="$C gpp"
 alias gpr="$C gpr"
+alias gu="$C gu"
+alias gur="$C gur"
 alias gs="$C gs"
 alias gf="$C gf"
-alias gb='$C gb'
+alias gb="$C gb"
+alias gt="$C gt"
 
 alias gread="gaa && gc 'Readme' && gp"
 alias gcomment="gaa && gc 'Comments' && gp"
@@ -41,6 +45,7 @@ alias master="git checkout master"
 alias staging="git checkout staging"
 alias merg="git merge development"
 alias dev="git checkout development"
+alias last="git checkout last"
 
 
 # Crt
@@ -59,6 +64,7 @@ alias zs="vim ~/.zshrc && source ~/.zshrc"
 alias scripts="cd $SRC/scripts"
 alias shared="cd $SRC/fund/shared"
 alias fund="cd $SRC/fund"
+alias fund_site="cd $SRC/fund_site"
 alias nn="cd $SRC/nn"
 alias alkalisk="cd $SRC/alkalisk"
 alias modz="cd $SRC/modz"
@@ -100,10 +106,10 @@ AD="$DD,app/controllers,app/routes"
 
 # Servers
 alias asset_server="asset && $C server 4000 $DD $DP"
-alias pushfile_server="pushfile && $C server 4001 $DD $DP"
 alias admin_server="admin && $C server 3001 $AD $DP"
+alias admin_server_production="admin && $C server 3001 $AD $DP production"
 alias site_server="site && $C server 3000 $AD $DP"
-alias site_test_server="site && $C server 3000 $AD $DP test"
+alias site_test_server="site && $C server 3010 $AD $DP test"
 alias site3_server="site3 && $C server 3000 $AD $DP"
 alias gosee_server="gosee && $C server 1234 $DD $DP"
 alias nw_server="nw && $C server 4567 $DD $DP"
@@ -113,9 +119,9 @@ alias routefu_server="routefu && $C server 1234 $DD $DP"
 
 # Tests
 alias asset_test="asset && $C testrun .,config $DP"
-alias admin_test="admin && $C testrun $AD $DP"
+alias admin_test="admin && $C testrun $AD $DP test"
+alias site_test="site && $C testrun $AD $DP test"
 alias modelize_test="modelize $C testrun $DD $DP"
-alias site_test="site && $C testrun $AD $DP"
 alias mm_test="mm && $C testrun $DD $DP"
 alias wave_test="wave && $C testrun $DD $DP"
 alias core_test="core && $C testrun $DD $DP"
@@ -131,9 +137,10 @@ RS='git pull && touch tmp/restart.txt'
 alias deploy_gosee="ssh play 'cd test && $RS'"
 alias deploy_wave="ssh play 'cd waveorb && $RS'"
 alias deploy_nw="ssh play 'cd network && $RS'"
-alias deploy_development="deploy && cap development deploy && fund"
-alias deploy_staging="deploy && cap staging deploy && fund"
-alias deploy_production="deploy && cap production deploy && fund"
+alias deploy_development="deploy && bundle exec cap development deploy && fund"
+alias deploy_staging="deploy && bundle exec cap staging deploy && fund"
+alias deploy_production="deploy && bundle exec cap production deploy && fund"
+alias deploy_last="deploy && bundle exec cap last deploy && fund"
 
 
 # Remote
