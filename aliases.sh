@@ -81,6 +81,7 @@ alias api="cd $SRC/fund/api"
 alias team="cd $SRC/fund/team"
 alias routefu="cd $SRC/routefu"
 alias wave="cd $SRC/waveorb"
+alias electro="$SRC/electro"
 alias gosee="cd $SRC/gosee"
 alias nw="cd $SRC/network"
 alias mm="cd $SRC/minimongo"
@@ -115,6 +116,8 @@ alias gosee_server="gosee && $C server 1234 $DD $DP"
 alias nw_server="nw && $C server 4567 $DD $DP"
 alias wave_server="wave && $C server 2345 $DD $DP"
 alias routefu_server="routefu && $C server 1234 $DD $DP"
+alias nn_server="nn && $C server 5000 $DD $DP"
+alias electro_server="electro && $C server 5001 $DD $DP"
 
 
 # Tests
@@ -128,6 +131,7 @@ alias core_test="core && $C testrun $DD $DP"
 alias futest_test="futest && $C testrun $DD $DP"
 alias convert_test="convert && $C testrun $DD $DP"
 alias pushfile_test="pushfile && $C testrun $DD $DP"
+alias electro_test="electro && $C testrun $DD $DP"
 
 
 # Restart
