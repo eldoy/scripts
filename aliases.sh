@@ -16,7 +16,8 @@ alias loc="find lib -name '*.*' | xargs wc -l"
 alias stuff="cat $SRC/stuff/text/stuff.txt"
 alias reload="source $HOME/.zshrc"
 alias port_app="lsof -i"
-
+alias update_assets='fund_site && cp -Rv ../fund/site/app/assets/ .'
+alias img="$C img"
 
 # Git
 alias g="$C g"
@@ -86,9 +87,10 @@ alias gosee="cd $SRC/gosee"
 alias nw="cd $SRC/network"
 alias mm="cd $SRC/minimongo"
 alias ttt="cd $SRC/ttt"
+alias tab="cd $SRC/tab"
 alias core="cd $SRC/mongocore"
 alias asset="cd $SRC/asset"
-alias convert="cd $SRC/convert"
+alias conv="cd $SRC/convert"
 alias src="cd $SRC"
 alias sites="cd $SRC/sites"
 alias play_sites="cd $SRC/play_sites"
@@ -118,6 +120,7 @@ alias wave_server="wave && $C server 2345 $DD $DP"
 alias routefu_server="routefu && $C server 1234 $DD $DP"
 alias nn_server="nn && $C server 5000 $DD $DP"
 alias electro_server="electro && $C server 5001 $DD $DP"
+alias tab_server="tab && $C server 5002 $DD $DP"
 
 
 # Tests
