@@ -24,10 +24,11 @@ def kp(args)
   args.each do |port|
     r = `lsof -i tcp:#{port}`
     r.split("\n").each do |l|
-      next if l =~ /^COMMAND/
-      l =~ /[A-z]+\s+(\d{1,10})/
-      pid = $1
-      `kill -9 #{pid}` if pid
+      if l =~ /^ruby/
+        l =~ /[A-z]+\s+(\d{1,10})/
+        pid = $1
+        `kill -1 #{pid}` if pid
+      end
     end
   end
 end
