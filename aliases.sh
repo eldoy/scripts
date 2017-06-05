@@ -15,7 +15,7 @@ alias dstore="find . -name '.DS_Store' -type f -delete"
 alias loc="find lib -name '*.*' | xargs wc -l"
 alias stuff="cat $SRC/stuff/text/stuff.txt"
 alias reload="source $HOME/.zshrc"
-alias port_app="lsof -i"
+alias kp="$C kp"
 alias update_assets='fund_site && cp -Rv ../fund/site/app/assets/ .'
 alias img="$C img"
 
@@ -88,6 +88,7 @@ alias nw="cd $SRC/network"
 alias mm="cd $SRC/minimongo"
 alias ttt="cd $SRC/ttt"
 alias tab="cd $SRC/tab"
+alias chem="cd $SRC/chem"
 alias core="cd $SRC/mongocore"
 alias asset="cd $SRC/asset"
 alias conv="cd $SRC/convert"
@@ -121,6 +122,7 @@ alias routefu_server="routefu && $C server 1234 $DD $DP"
 alias nn_server="nn && $C server 5000 $DD $DP"
 alias electro_server="electro && $C server 5001 $DD $DP"
 alias tab_server="tab && $C server 5002 $DD $DP"
+alias chem_server="chem && $C server 5002 $DD $DP"
 
 
 # Tests
@@ -148,6 +150,7 @@ alias deploy_development="deploy && bundle exec cap development deploy && fund"
 alias deploy_staging="deploy && bundle exec cap staging deploy && fund"
 alias deploy_production="deploy && bundle exec cap production deploy && fund"
 alias deploy_last="deploy && bundle exec cap last deploy && fund"
+alias deploy_tab="ssh play 'cd tabibito && git pull && touch tmp/restart.txt'"
 
 
 # Remote
