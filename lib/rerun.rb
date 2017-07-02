@@ -3,7 +3,7 @@
 def server(args)
   port, dir, pattern, e = args
   begin
-    system(%{bundle exec rerun --dir #{dir} --pattern '#{pattern}' -- puma -e #{e || 'development'} --port=#{port} -R config.ru})
+    system(%{bundle exec rerun --no-notify --dir #{dir} --pattern '#{pattern}' -- puma -e #{e || 'development'} --port=#{port} -R config.ru})
   rescue
     puts "Shutting down..."; exit(0)
   end
@@ -13,7 +13,7 @@ def testrun(args)
   dir, pattern, e = args
   puts "ENVIRONMENT: #{e}"
   begin
-    system(%{bundle exec rerun --dir #{dir},test --pattern '#{pattern}' -- RACK_ENV=#{e || 'development'} ruby test/run.rb})
+    system(%{bundle exec rerun --no-notify --dir #{dir},test --pattern '#{pattern}' -- RACK_ENV=#{e || 'development'} ruby test/run.rb})
   rescue
     puts "Shutting down..."; exit(0)
   end
