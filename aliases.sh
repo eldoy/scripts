@@ -10,7 +10,7 @@ C="$SCRIPTS/run.rb"
 
 # Utils
 alias sub="open -a 'Sublime Text'"
-alias console="irb -r ./config/boot.rb"
+alias console="bundle exec irb -r ./config/boot.rb"
 alias dstore="find . -name '.DS_Store' -type f -delete"
 alias loc="find lib -name '*.*' | xargs wc -l"
 alias stuff="cat $SRC/stuff/text/stuff.txt"
@@ -18,6 +18,8 @@ alias reload="source $HOME/.zshrc && rvm reload"
 alias kp="lsof -i"
 alias update_assets='fund_site && cp -Rv ../fund/site/app/assets/ .'
 alias img="$C img"
+alias count="ls -l . | egrep -c '^-'"
+alias sim="wapi && ruby scripts/simulator.rb"
 
 # Git
 alias g="$C g"
@@ -54,6 +56,7 @@ alias crt_info="openssl x509 -text -noout -in"
 alias csr_info="openssl req -noout -text -in"
 alias cert="openssl x509 -noout -subject -in client.crt"
 alias inspect="openssl req -in client.key -noout -text"
+alias test_crt="openssl s_client -connect yoursite.com:443 -CAfile /usr/local/share/ca-bundle.crt -status"
 
 
 # Zsh
@@ -78,7 +81,6 @@ alias flat="cd $SRC/flatspace"
 alias fugroup="cd $SRC/fugroup"
 alias music="cd $SRC/music"
 alias pushfile="cd $SRC/pushfile"
-alias api="cd $SRC/fund/api"
 alias team="cd $SRC/fund/team"
 alias routefu="cd $SRC/routefu"
 alias wave="cd $SRC/waveorb"
@@ -90,14 +92,29 @@ alias ttt="cd $SRC/ttt"
 alias tab="cd $SRC/tab"
 alias chem="cd $SRC/chem"
 alias core="cd $SRC/mongocore"
+alias coreweb="cd $SRC/mongocore-web"
 alias asset="cd $SRC/asset"
 alias conv="cd $SRC/convert"
 alias src="cd $SRC"
 alias sites="cd $SRC/sites"
 alias play_sites="cd $SRC/play_sites"
+alias orb_sites="cd $SRC/orb_sites"
 alias hq="cd $SRC/hq"
 alias deploy="cd $SRC/deploy"
-
+alias sus="cd $SRC/susana"
+alias easy="cd $SRC/easymongo"
+alias hashd="cd $SRC/hashd"
+alias wapi="cd $SRC/waveorb/api"
+alias wclient="cd $SRC/waveorb/client"
+alias o4="cd $SRC/o4"
+alias oclient="cd $SRC/o4/client"
+alias oapi="cd $SRC/o4/api"
+alias mem="cd $SRC/memlearn"
+alias mclient="cd $SRC/memlearn/client"
+alias mapi="cd $SRC/memlearn/api"
+alias svue="cd $SRC/susana-vue"
+alias sapi="cd $SRC/susana-vue/api"
+alias sclient="cd $SRC/susana-vue/client"
 
 # Default dir
 DD='.,lib,config'
@@ -117,13 +134,17 @@ alias site_test_server="site && $C server 3010 $AD $DP test"
 alias site3_server="site3 && $C server 3000 $AD $DP"
 alias gosee_server="gosee && $C server 1234 $DD $DP"
 alias nw_server="nw && $C server 4567 $DD $DP"
-alias wave_server="wave && $C server 2345 $DD $DP"
+alias wave_server="wave && bundle exec puma -p 2345"
 alias routefu_server="routefu && $C server 1234 $DD $DP"
 alias nn_server="nn && $C server 5000 $DD $DP"
 alias electro_server="electro && $C server 5001 $DD $DP"
 alias tab_server="tab && $C server 5002 $DD $DP"
 alias chem_server="chem && $C server 5002 $DD $DP"
-
+alias sus_server="sus && $C server 2345 $DD $DP"
+alias wapi_server="wapi && $C server 2345 $DD $DP"
+alias oapi_server="oapi && $C server 2345 $DD $DP"
+alias mapi_server="mapi && $C server 2345 $DD $DP"
+alias sapi_server="sapi && $C server 2345 $DD $DP"
 
 # Tests
 alias asset_test="asset && $C testrun .,config $DP"
@@ -137,14 +158,21 @@ alias futest_test="futest && $C testrun $DD $DP"
 alias convert_test="convert && $C testrun $DD $DP"
 alias pushfile_test="pushfile && $C testrun $DD $DP"
 alias electro_test="electro && $C testrun $DD $DP"
-
+alias easy_test="easy && $C testrun $DD $DP"
+alias sus_test="sus && $C testrun $DD $DP"
+alias hashd_test="hashd && $C testrun $DD $DP"
+alias gosee_test="gosee && $C testrun $DD $DP"
+alias mapi_test="mapi && $C testrun $DD $DP"
+alias sapi_test="sapi && $C testrun $DD $DP"
 
 # Restart
 RS='git pull && touch tmp/restart.txt'
 
 # Deploy
 alias deploy_gosee="ssh play 'cd test && $RS'"
-alias deploy_wave="ssh play 'cd waveorb && $RS'"
+alias deploy_wave="ssh orb 'cd waveorb/api && $RS'"
+alias deploy_mem="ssh orb 'cd memlearn/api && $RS'"
+alias deploy_o4="ssh play 'cd o4/api && $RS'"
 alias deploy_nw="ssh play 'cd network && $RS'"
 alias deploy_development="deploy && bundle exec cap development deploy && fund"
 alias deploy_staging="deploy && bundle exec cap staging deploy && fund"

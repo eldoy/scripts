@@ -1,9 +1,12 @@
 # alias rraa="$C server 4000 lib,config **/*.{rb,ru,yml}"
-
 def server(args)
   port, dir, pattern, e = args
   begin
-    system(%{bundle exec rerun --no-notify --dir #{dir} --pattern '#{pattern}' -- puma -e #{e || 'development'} --port=#{port} -R config.ru})
+    if File.file?('./config/puma.rb')
+      system(%{bundle exec rerun --no-notify --dir #{dir} --pattern '#{pattern}' -- pumactl -F config/puma.rb start})
+    else
+      system(%{bundle exec rerun --no-notify --dir #{dir} --pattern '#{pattern}' -- puma -e #{e || 'development'} --port=#{port} -R config.ru})
+    end
   rescue
     puts "Shutting down..."; exit(0)
   end
