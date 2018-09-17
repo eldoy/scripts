@@ -20,6 +20,8 @@ alias update_assets='fund_site && cp -Rv ../fund/site/app/assets/ .'
 alias img="$C img"
 alias count="ls -l . | egrep -c '^-'"
 alias sim="wapi && ruby scripts/simulator.rb"
+alias nm="nodemon"
+alias y="yarn"
 
 # Git
 alias g="$C g"
@@ -102,7 +104,6 @@ alias orb_sites="cd $SRC/orb_sites"
 alias hq="cd $SRC/hq"
 alias deploy="cd $SRC/deploy"
 alias sus="cd $SRC/susana"
-alias yql="cd $SRC/yql"
 alias easy="cd $SRC/easymongo"
 alias hashd="cd $SRC/hashd"
 alias wapi="cd $SRC/waveorb/api"
@@ -134,6 +135,24 @@ alias vclient="cd $SRC/vdbshop/client"
 alias friend="cd $SRC/friend"
 alias friend_api="cd $SRC/friend/api"
 alias friend_client="cd $SRC/friend/client"
+alias faas="cd $SRC/faas"
+alias faas_client="cd $SRC/faas/client"
+alias faas_demo="cd $SRC/faas/demo"
+alias faas_server="cd $SRC/faas/server"
+alias asylet="cd $SRC/asylet"
+alias brage="cd $SRC/brage"
+alias yql="cd $SRC/microservices/lib/yql"
+alias conficurse="cd $SRC/microservices/lib/conficurse"
+alias jwtify="cd $SRC/microservices/lib/jwtify"
+alias mngo="cd $SRC/microservices/lib/mngo"
+alias rainlog="cd $SRC/microservices/lib/rainlog"
+alias routerlink="cd $SRC/microservices/lib/router-link"
+alias wsrecon="cd $SRC/microservices/lib/wsrecon"
+alias websocket="cd $SRC/microservices/websocket"
+alias account="cd $SRC/microservices/account"
+alias upload="cd $SRC/microservices/upload"
+alias cli="cd $SRC/microservices/cli"
+
 
 # Default dir
 DD='.,lib,config'
@@ -170,6 +189,7 @@ alias gapi_server="gapi && $C server 2345 $DD $DP"
 alias dapi_server="dapi && $C server 2345 $DD $DP"
 alias vapi_server="vapi && $C server 2345 $DD $DP"
 alias friend_server="friend && $C server 2345 $DD $DP"
+alias asylet_server="asylet && $C server 2345 $DD $DP"
 
 # Tests
 alias asset_test="asset && $C testrun .,config $DP"
@@ -209,8 +229,10 @@ alias deploy_development="deploy && bundle exec cap development deploy && fund"
 alias deploy_staging="deploy && bundle exec cap staging deploy && fund"
 alias deploy_production="deploy && bundle exec cap production deploy && fund"
 alias deploy_last="deploy && bundle exec cap last deploy && fund"
-alias deploy_tab="ssh play 'cd tabibito && git pull && touch tmp/restart.txt'"
-alias deploy_docs="ssh orb 'cd fund_docs && git pull && touch tmp/restart.txt'"
+alias deploy_tab="ssh play 'cd tabibito && $RS'"
+alias deploy_docs="ssh orb 'cd fund_docs && $RS'"
+alias deploy_asylet="ssh orb 'cd asylet && $RS'"
+alias deploy_vdb="ssh orb 'cd vdbshop/api && $RS'"
 
 
 # Remote
