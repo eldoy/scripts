@@ -155,7 +155,7 @@ alias websocket="cd $SRC/microservices/websocket"
 alias account="cd $SRC/microservices/account"
 alias upload="cd $SRC/microservices/upload"
 alias cli="cd $SRC/microservices/cli"
-
+alias sirloin="cd $SRC/microservices/lib/sirloin"
 
 # Default dir
 DD='.,lib,config'
