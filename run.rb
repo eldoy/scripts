@@ -3,7 +3,7 @@
 # Add each command as an alias in aliases.sh
 # Define a ruby file with methods that matches the aliases to run in lib
 
-# Short creating a command
+# Short cut for creating a command
 def cmd(cmd, *args)
   system("#{cmd} #{args.join(' ')}")
 end

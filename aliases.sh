@@ -14,7 +14,7 @@ alias console="bundle exec irb -r ./config/boot.rb"
 alias dstore="find . -name '.DS_Store' -type f -delete"
 alias loc="find lib -name '*.*' | xargs wc -l"
 alias stuff="cat $SRC/stuff/text/stuff.txt"
-alias reload="source $HOME/.zshrc && rvm reload"
+alias reload="source $HOME/.zshrc"
 alias kp="lsof -i"
 alias update_assets='fund_site && cp -Rv ../fund/site/app/assets/ .'
 alias img="$C img"
@@ -22,6 +22,8 @@ alias count="ls -l . | egrep -c '^-'"
 alias sim="wapi && ruby scripts/simulator.rb"
 alias nm="nodemon"
 alias y="yarn"
+alias ys="yarn start"
+alias yt="yarn test"
 
 # Git
 alias g="$C g"
@@ -51,6 +53,7 @@ alias staging="git checkout staging"
 alias merg="git merge development"
 alias dev="git checkout development"
 alias last="git checkout last"
+alias cl="NODE_ENV=production $SRC/microservices/cli/dist/cli"
 
 
 # Crt
@@ -244,3 +247,4 @@ alias update_all="deploy && bundle exec cap load server:update"
 alias docker_rm="docker rm \$(docker ps -a -q)"
 alias docker_rmi="docker rmi \$(docker images -q)"
 alias docker_rmia="docker rmi \$(docker images -q -a)"
+alias dc="docker-compose"
