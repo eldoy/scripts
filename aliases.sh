@@ -24,6 +24,8 @@ alias nm="nodemon"
 alias y="yarn"
 alias ys="yarn start"
 alias yt="yarn test"
+alias ya="yarn add"
+alias yr="yarn remove"
 
 # Git
 alias g="$C g"
@@ -43,6 +45,13 @@ alias gf="$C gf"
 alias gb="$C gb"
 alias gt="$C gt"
 
+# Lendo
+# Update common
+alias uc="/Users/vidar/src/scripts/sh/find_any_copy.sh"
+
+# NPM
+alias lf="npm run lintfix"
+
 alias gread="gaa && gc 'Readme' && gp"
 alias gcomment="gaa && gc 'Comments' && gp"
 alias gchange="gaa && gc 'Changelog' && gp"
@@ -52,6 +61,7 @@ alias master="git checkout master"
 alias staging="git checkout staging"
 alias merg="git merge development"
 alias dev="git checkout development"
+alias dv="git checkout dev"
 alias last="git checkout last"
 alias cl="NODE_ENV=production $SRC/microservices/cli/dist/cli"
 
@@ -155,6 +165,9 @@ alias websocket="cd $SRC/microservices/websocket"
 alias account="cd $SRC/microservices/account"
 alias upload="cd $SRC/microservices/upload"
 alias cli="cd $SRC/microservices/cli"
+alias clid="NODE_ENV=development node index.js"
+alias clis="NODE_ENV=staging node index.js"
+alias clip="NODE_ENV=production node index.js"
 alias sirloin="cd $SRC/microservices/lib/sirloin"
 
 # Default dir
@@ -244,7 +257,9 @@ alias update_all="deploy && bundle exec cap load server:update"
 
 
 # Docker
-alias docker_rm="docker rm \$(docker ps -a -q)"
-alias docker_rmi="docker rmi \$(docker images -q)"
-alias docker_rmia="docker rmi \$(docker images -q -a)"
+alias d="docker"
+alias ds="docker swarm"
+alias drm="docker rm \$(docker ps -a -q)"
+alias drmi="docker rmi \$(docker images -q)"
+alias drmia="docker rmi \$(docker images -q -a)"
 alias dc="docker-compose"

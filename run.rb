@@ -12,11 +12,11 @@ end
 require_relative 'lib/git'
 require_relative 'lib/rerun'
 require_relative 'lib/image'
+require_relative 'lib/npm'
 
 # Run the command
-command = ARGV.shift; send(command, ARGV)
 begin
-
+  command = ARGV.shift; send(command, ARGV)
 rescue
   puts "Unable to process command: #{command}"
 ensure
