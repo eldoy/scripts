@@ -47,7 +47,14 @@ alias gt="$C gt"
 
 # Lendo
 # Update common
-alias uc="/Users/vidar/src/scripts/sh/find_any_copy.sh"
+alias lc="npm i @lendo/common"
+alias uc="sh /Users/vidar/src/scripts/sh/find_any_copy.sh"
+alias common="cd ~/src/lendo/web_common"
+alias cc="cd ~/src/lendo/ms_front_creditcard"
+alias debt="cd ~/src/lendo/ms_front_debt_register"
+alias tilbud="cd ~/src/lendo/ms_front_offer_presentation"
+alias frontpage="cd ~/src/lendo/ms_front_frontpage"
+alias article="cd ~/src/lendo/ms_front_article"
 
 # NPM
 alias lf="npm run lintfix"
