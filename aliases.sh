@@ -26,6 +26,7 @@ alias ys="yarn start"
 alias yt="yarn test"
 alias ya="yarn add"
 alias yr="yarn remove"
+alias ka="killall"
 
 # Git
 alias g="$C g"
@@ -48,7 +49,8 @@ alias gt="$C gt"
 # Lendo
 # Update common
 alias lc="npm i @lendo/common"
-alias uc="sh /Users/vidar/src/scripts/sh/find_any_copy.sh"
+alias uc="sh /Users/vidar/src/scripts/sh/update_common.sh"
+alias ua="sh /Users/vidar/src/scripts/sh/update_article.sh"
 alias common="cd ~/src/lendo/web_common"
 alias cc="cd ~/src/lendo/ms_front_creditcard"
 alias debt="cd ~/src/lendo/ms_front_debt_register"
@@ -256,6 +258,7 @@ alias deploy_tab="ssh play 'cd tabibito && $RS'"
 alias deploy_docs="ssh orb 'cd fund_docs && $RS'"
 alias deploy_asylet="ssh orb 'cd asylet && $RS'"
 alias deploy_vdb="ssh orb 'cd vdbshop/api && $RS'"
+alias deploy_rummage="ssh orb 'cd rummage && git pull && yarn build && forever start server.js'"
 
 
 # Remote
