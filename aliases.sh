@@ -177,7 +177,7 @@ alias cli="cd $SRC/microservices/cli"
 alias clid="NODE_ENV=development node index.js"
 alias clis="NODE_ENV=staging node index.js"
 alias clip="NODE_ENV=production node index.js"
-alias sirloin="cd $SRC/microservices/lib/sirloin"
+alias sl="cd $SRC/microservices/lib/sirloin"
 
 # Default dir
 DD='.,lib,config'
