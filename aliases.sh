@@ -59,7 +59,12 @@ alias frontpage="cd ~/src/lendo/ms_front_frontpage"
 alias article="cd ~/src/lendo/ms_front_article"
 
 # NPM
-alias lf="npm run lintfix"
+alias nlf="npm run lintfix"
+alias nr="npm run"
+alias ni="npm install"
+alias nu="npm uninstall"
+alias nid="npm install --save-dev"
+alias np="npm publish"
 
 alias gread="gaa && gc 'Readme' && gp"
 alias gcomment="gaa && gc 'Comments' && gp"
@@ -177,7 +182,7 @@ alias cli="cd $SRC/microservices/cli"
 alias clid="NODE_ENV=development node index.js"
 alias clis="NODE_ENV=staging node index.js"
 alias clip="NODE_ENV=production node index.js"
-alias sirloin="cd $SRC/microservices/lib/sirloin"
+alias sl="cd $SRC/microservices/lib/sirloin"
 
 # Default dir
 DD='.,lib,config'
