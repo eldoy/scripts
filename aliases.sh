@@ -27,6 +27,7 @@ alias yt="yarn test"
 alias ya="yarn add"
 alias yr="yarn remove"
 alias ka="killall"
+alias kn="killall node"
 
 # Git
 alias g="$C g"
