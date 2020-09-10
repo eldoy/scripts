@@ -28,6 +28,7 @@ alias ya="yarn add"
 alias yr="yarn remove"
 alias ka="killall"
 alias kn="killall node"
+alias mongodb="~/.mongodb/mongodb/bin/mongod --port 27017 --dbpath ~/.mongodb/data/db > /dev/null 2> ~/.mongodb/err.log &"
 
 # Git
 alias g="$C g"
@@ -66,6 +67,10 @@ alias ni="npm install"
 alias nu="npm uninstall"
 alias nid="npm install --save-dev"
 alias np="npm publish"
+alias nt="npm run test"
+alias ns="npm run serve"
+alias nst="npm run serve-test"
+alias nv="npm version"
 
 alias gread="gaa && gc 'Readme' && gp"
 alias gcomment="gaa && gc 'Comments' && gp"
@@ -80,6 +85,11 @@ alias dv="git checkout dev"
 alias last="git checkout last"
 alias cl="NODE_ENV=production $SRC/microservices/cli/dist/cli"
 
+# Waveorb
+alias ws="nodemon -e js,json,yml -i dist -x waveorb serve"
+alias wb="rm -rf ./dist && waveorb build"
+alias wd="waveorb deploy"
+alias wbd="wb && wd"
 
 # Crt
 alias crt_info="openssl x509 -text -noout -in"
