@@ -69,7 +69,7 @@ alias nid="npm install --save-dev"
 alias np="npm publish"
 alias nt="npm run test"
 alias ns="npm run serve"
-alias nst="npm run serve-test"
+alias nst="npm run serve:test"
 alias nv="npm version"
 
 alias gread="gaa && gc 'Readme' && gp"
