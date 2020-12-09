@@ -48,18 +48,6 @@ alias gf="$C gf"
 alias gb="$C gb"
 alias gt="$C gt"
 
-# Lendo
-# Update common
-alias lc="npm i @lendo/common"
-alias uc="sh /Users/vidar/src/scripts/sh/update_common.sh"
-alias ua="sh /Users/vidar/src/scripts/sh/update_article.sh"
-alias common="cd ~/src/lendo/web_common"
-alias cc="cd ~/src/lendo/ms_front_creditcard"
-alias debt="cd ~/src/lendo/ms_front_debt_register"
-alias tilbud="cd ~/src/lendo/ms_front_offer_presentation"
-alias frontpage="cd ~/src/lendo/ms_front_frontpage"
-alias article="cd ~/src/lendo/ms_front_article"
-
 # NPM
 alias nlf="npm run lintfix"
 alias nr="npm run"
@@ -69,7 +57,7 @@ alias nid="npm install --save-dev"
 alias np="npm publish"
 alias nt="npm run test"
 alias ns="npm run serve"
-alias nst="npm run serve-test"
+alias nst="npm run serve:test"
 alias nv="npm version"
 
 alias gread="gaa && gc 'Readme' && gp"
@@ -194,6 +182,10 @@ alias clid="NODE_ENV=development node index.js"
 alias clis="NODE_ENV=staging node index.js"
 alias clip="NODE_ENV=production node index.js"
 alias sl="cd $SRC/microservices/lib/sirloin"
+alias aw="cd $SRC/crowdfundhq2/admin/web"
+alias aa="cd $SRC/crowdfundhq2/admin/api"
+alias sw="cd $SRC/crowdfundhq2/site/web"
+alias sa="cd $SRC/crowdfundhq2/site/api"
 
 # Default dir
 DD='.,lib,config'
