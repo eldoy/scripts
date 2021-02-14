@@ -74,6 +74,8 @@ alias dv="git checkout dev"
 alias last="git checkout last"
 alias cl="NODE_ENV=production $SRC/microservices/cli/dist/cli"
 alias patch="npm version patch && git push"
+alias minor="npm version minor && git push"
+alias major="npm version major && git push"
 
 # Waveorb
 alias ws="nodemon -e js,json,yml -i dist -x waveorb serve"
