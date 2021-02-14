@@ -59,6 +59,7 @@ alias nt="npm run test"
 alias ns="npm run serve"
 alias nst="npm run serve:test"
 alias nv="npm version"
+alias ng="npm i -g"
 
 alias gread="gaa && gc 'Readme' && gp"
 alias gcomment="gaa && gc 'Comments' && gp"
