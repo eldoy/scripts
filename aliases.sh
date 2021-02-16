@@ -14,8 +14,7 @@ alias console="bundle exec irb -r ./config/boot.rb"
 alias dstore="find . -name '.DS_Store' -type f -delete"
 alias loc="find lib -name '*.*' | xargs wc -l"
 alias stuff="cat $SRC/stuff/text/stuff.txt"
-alias reload="source $HOME/.zshrc"
-alias kp="lsof -i"
+alias rl="source $HOME/.zshrc"
 alias update_assets='fund_site && cp -Rv ../fund/site/app/assets/ .'
 alias img="$C img"
 alias count="ls -l . | egrep -c '^-'"
@@ -29,6 +28,12 @@ alias yr="yarn remove"
 alias ka="killall"
 alias kn="killall node"
 alias mongodb="~/.mongodb/mongodb/bin/mongod --port 27017 --dbpath ~/.mongodb/data/db > /dev/null 2> ~/.mongodb/err.log &"
+alias kp="npx kill-port"
+
+function template {
+  git clone https://github.com/eldoy/libinit.git $1 && rm -rf $1/.git && cd $1 && git init
+}
+
 
 # Git
 alias g="$C g"
