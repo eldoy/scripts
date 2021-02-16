@@ -28,9 +28,8 @@ alias yr="yarn remove"
 alias ka="killall"
 alias kn="killall node"
 alias mongodb="~/.mongodb/mongodb/bin/mongod --port 27017 --dbpath ~/.mongodb/data/db > /dev/null 2> ~/.mongodb/err.log &"
-alias kp="npx kill-port"
 
-function template {
+function li {
   git clone https://github.com/eldoy/libinit.git $1 && rm -rf $1/.git && cd $1 && git init
 }
 
