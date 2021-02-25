@@ -66,6 +66,8 @@ alias nm="npm run migrate"
 alias nst="npm run serve:test"
 alias nv="npm version"
 alias ng="npm i -g"
+alias nc="ncu -u"
+alias wnc="while true; do ncu -u; done"
 
 alias gread="gaa && gc 'Readme' && gp"
 alias gcomment="gaa && gc 'Comments' && gp"
