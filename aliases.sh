@@ -33,7 +33,6 @@ function li {
   git clone https://github.com/eldoy/libinit.git $1 && rm -rf $1/.git && cd $1 && git init
 }
 
-
 # Git
 alias g="$C g"
 alias gs="$C gs"
@@ -69,6 +68,13 @@ alias ng="npm i -g"
 alias nc="ncu -u"
 alias wnc="while true; do ncu -u; done"
 alias nci="ncu -u && npm i"
+function nstat() {
+  for name in $@
+  do
+    curl https://api.npmjs.org/downloads/point/last-week/$name
+    printf "\n\n"
+  done
+}
 
 alias gread="gaa && gc 'Readme' && gp"
 alias gcomment="gaa && gc 'Comments' && gp"
