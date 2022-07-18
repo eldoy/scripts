@@ -7,8 +7,8 @@ SCRIPTS="$SRC/scripts"
 # The ruby runner
 C="$SCRIPTS/run.rb"
 
-
 # Utils
+alias c="codium"
 alias sub="open -a 'Sublime Text'"
 alias console="bundle exec irb -r ./config/boot.rb"
 alias dstore="find . -name '.DS_Store' -type f -delete"
