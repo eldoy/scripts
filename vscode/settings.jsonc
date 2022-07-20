@@ -71,5 +71,6 @@
       "terminal.ansiBlack":"#FDF6E3"
   },
   "terminal.integrated.localEchoLatencyThreshold": -1,
-  "terminal.integrated.scrollback": 100000
+  "terminal.integrated.scrollback": 100000,
+  "terminal.integrated.tabs.enabled": false
 }
