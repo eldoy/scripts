@@ -1,0 +1,26 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "cmd+shift+l",
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "console.log($1)" },
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+v",
+    "command": "pasteAndIndent.action",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+v",
+    "command": "editor.action.clipboardPasteAction",
+    "when": "!editorTextFocus"
+  },
+  {
+    "key": "cmd+shift+v",
+    "command": "editor.action.clipboardPasteAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  { "key": "ctrl+`", "command": "workbench.action.terminal.focus"},
+  { "key": "ctrl+`", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"}
+]
