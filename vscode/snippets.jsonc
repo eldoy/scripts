@@ -1,0 +1,70 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "cl",
+		"body": [
+			"console.log($1)"
+		],
+		"description": "Log output to console"
+	},
+	"Jest desc": {
+		"prefix": "desc",
+		"body": [
+			"describe('$1', () => {\n\n})"
+		],
+		"description": "Jest description section"
+	},
+	"Jest it should tests": {
+		"prefix": "it",
+		"body": [
+			"it('should $1', async () => {\n\n})"
+		],
+		"description": "Jest it"
+	},
+	"Jest it should tests skipped": {
+		"prefix": "xit",
+		"body": [
+			"xit('should $1', () => {\n\n})"
+		],
+		"description": "Jest xit"
+	},
+	"Waveorb async function": {
+		"prefix": "$fn",
+		"body": [
+			"async function($) {\n  return /* html */`\n    $0\n  `\n}"
+		],
+		"description": "Waveorb async function"
+	},
+	"Waveorb translation literal": {
+		"prefix": "#t",
+		"body": [
+			"${ $.t('$1') }"
+		],
+		"description": "Waveorb translation literal"
+	},
+	"Waveorb translation": {
+		"prefix": "$t",
+		"body": [
+			"$.t('$1')"
+		],
+		"description": "Waveorb translation"
+	},
+	"Waveorb link": {
+		"prefix": "$l",
+		"body": [
+			"$.link('$1')"
+		],
+		"description": "Waveorb link"
+	},
+	"Waveorb link literal": {
+		"prefix": "#l",
+		"body": [
+			"${ $.link('$1') }"
+		],
+		"description": "Waveorb link literal"
+	}
+}
