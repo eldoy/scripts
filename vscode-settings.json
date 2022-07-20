@@ -1,4 +1,7 @@
 {
+  "editor.quickSuggestionsDelay": 10000,
+  "editor.hover.enabled": false,
+  "editor.parameterHints.enabled": false,
   "workbench.activityBar.visible": false,
   "window.zoomLevel": 2,
   "terminal.integrated.tabs.enabled": false,
@@ -15,6 +18,22 @@
   "emmet.includeLanguages": {
     "javascript": "html"
   },
+  "prettier.arrowParens": "avoid",
+  "prettier.bracketSpacing": true,
+  "prettier.endOfLine": "lf",
+  "prettier.htmlWhitespaceSensitivity": "css",
+  "prettier.insertPragma": false,
+  "prettier.printWidth": 120,
+  "prettier.proseWrap": "preserve",
+  "prettier.quoteProps": "as-needed",
+  "prettier.requirePragma": false,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "none",
+  "prettier.useTabs": false,
+  "prettier.embeddedLanguageFormatting": "auto",
+
   "vim.easymotion": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
