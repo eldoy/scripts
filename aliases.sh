@@ -8,6 +8,7 @@ SCRIPTS="$SRC/scripts"
 C="$SCRIPTS/run.rb"
 
 # Utils
+alias v="vagrant"
 alias c="codium"
 alias sub="open -a 'Sublime Text'"
 alias console="bundle exec irb -r ./config/boot.rb"
