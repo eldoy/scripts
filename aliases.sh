@@ -110,6 +110,7 @@ alias inspect="openssl req -in client.key -noout -text"
 alias test_crt="openssl s_client -connect yoursite.com:443 -CAfile /usr/local/share/ca-bundle.crt -status"
 
 # Zsh
+alias zc="source ~/.zshrc"
 alias zsl="vim ~/.zshrc.local && source ~/.zshrc"
 alias zs="vim ~/.zshrc && source ~/.zshrc"
 
