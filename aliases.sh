@@ -122,3 +122,6 @@ alias drm="docker rm \$(docker ps -a -q)"
 alias drmi="docker rmi \$(docker images -q)"
 alias drmia="docker rmi \$(docker images -q -a)"
 alias dc="docker-compose"
+
+# Maintenance
+alias clean="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
